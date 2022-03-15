@@ -39,6 +39,27 @@ int main ()
     cout<<" "<<*rit;
     cout<<"\n";
 
+
+//set::empty: Returns whether the set container is empty (i.e. whether its size is 0).
+std::set<int> myset;
+
+  myset.insert(20);
+  myset.insert(30);
+  myset.insert(10);
+
+  std::cout << "myset contains:";
+  while (!myset.empty())
+  {
+     std::cout << ' ' << *myset.begin();
+     myset.erase(myset.begin());
+  }
+  std::cout << '\n';
+
+
+//std::size: Returns the number of elements in the set container.
+
+    cout<<"Size of s2 is: "<<s2.size();
+
   return 0;
 }
 
