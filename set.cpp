@@ -156,11 +156,18 @@ set<char> m;
   
    for (auto it = m.begin(); it != m.end(); ++it)  
       cout << *it<< ", ";  
+  cout<<"\n";
+
+//std::find: Searches the container for an element equivalent to val and returns an iterator to it if found,
+//           otherwise it returns an iterator to set::end.
+
+  set<int> myset4 = {100,200,300,400};  
   
-
-
-
-
+   auto t = myset4.find(300);  
+  
+   cout << "Iterator points to " << *t << endl;  
+  
+   return 0;  
 
 
   return 0;
