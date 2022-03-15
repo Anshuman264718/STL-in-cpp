@@ -25,12 +25,20 @@ std::vector<int> vec4 {1,2,3,4,5}; // uniform initialization
 cout<<'\n';
 
 
-//vector::push_back()
+//vector::push_back(): Adds a new element at the end of the vector, after its current last element. The content of val is copied 
+//                     (or moved) to the new element.
+
 vector<int> vec5;
 for(int i=0;i<6;i++){
     vec5.push_back(i);
-    cout<<vec5.size();
+    
 }
+cout<<'\n';
+cout<<"size of vec5: ";
+    cout<<vec5.size();
+cout<<'\n';
+
+cout<<"vec5 contains: ";
 
 for (int x : vec5)
         cout << x << " ";
@@ -42,7 +50,7 @@ cout<<'\n';
 //      this function returns a random access iterator pointing to it.
 
 std::vector<int> vec6;
-for(int i=0;i<=5;i++)
+for(int i=0;i<=7;i++)
 vec6.push_back(i);
     
 cout<<"vec6 contains";
@@ -58,7 +66,6 @@ cout<<'\n';
 
 //vector:resize()
 //Resizes the container so that it contains n elements.
-
 std::vector<int> myvector;
 // set some initial content:
 for (int i=1;i<10;i++) myvector.push_back(i);
