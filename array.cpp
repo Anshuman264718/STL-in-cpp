@@ -44,6 +44,19 @@ int main(){
     cout<<'\n';
 
 
+    //array::cbegin: Returns a const_iterator pointing to the first element in the array container.
+    //array::cend: Returns a const_iterator pointing to the past-the-end element in the array container.
+
+    std::array<int,5> myarray4 = { 2, 16, 77, 34, 50 };
+
+    std::cout << "myarray4 contains:";
+
+    for ( auto t = myarray4.cbegin(); t != myarray4.cend(); ++t )
+        std::cout << ' ' << *t;   // cannot modify *it
+
+    std::cout << '\n';
+
+
     //array::size : Returns the number of elements in the array container.
     std::array<int,10> arr3;
     cout<<"size of arr3 is "<<arr3.size();
@@ -70,7 +83,9 @@ int main(){
     //Returns a reference to the last element in the array container.
     cout<<"Element at last position is "<<arr4.back();
     cout<<'\n';
-    
+
+
+
     //array::fill : Sets val as the value for all the elements in the array object.
     std::array<int,6> arr5;
     arr5.fill(1);

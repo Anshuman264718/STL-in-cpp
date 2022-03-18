@@ -24,6 +24,20 @@ int main ()
           cout << ' ' << *it;
   cout << '\n';
 
+
+//list::rbegin: Returns a reverse iterator pointing to the last element in the container (i.e., its reverse beginning).
+//Reverse iterators iterate backwards: increasing them moves them towards the beginning of the container.
+//rbegin points to the element right before the one that would be pointed to by member end.
+
+  std::list<int> mylist1;
+  for (int i=1; i<=5; ++i) mylist.push_back(i);
+
+  std::cout << "mylist1 backwards:";
+  for (std::list<int>::reverse_iterator rit=mylist1.rbegin(); rit!=mylist1.rend(); ++rit)
+    std::cout << ' ' << *rit;
+
+  std::cout << '\n';
+
 //list::front
   cout<<"Front element is: "<<mylist.front()<<endl;
 
@@ -32,6 +46,11 @@ int main ()
 
 //list::size
   cout<<"size of mylist is: "<<mylist.size()<<endl;
+
+//list::max_size:Returns the maximum number of elements that the list container can hold.
+//This is the maximum potential size the container can reach due to known system or library implementation limitations, 
+//but the container is by no means guaranteed to be able to reach that size: it can still fail to allocate storage at any
+// point before that size is reached.
 
 
 //list::assign: Assigns new contents to the list container, replacing its current contents, and modifying its size accordingly.
@@ -108,8 +127,9 @@ cout << *r<<" ";
 cout<<endl;
 
 
-
-
+//list::swap: exchange the contents of the list with another list of same type but the sizes can be differ.
+//Parameter
+//x: It is an another list which is to be exchanged with the given list.
 
 
 

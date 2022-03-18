@@ -59,6 +59,21 @@ for (auto it = vec6.begin();
         cout << ' ' << *it;
 cout<<'\n';
 
+
+//vector::cbegin: Returns a const_iterator pointing to the first element in the container.
+//                A const_iterator is an iterator that points to const content. This iterator can be increased and decreased 
+//                (unless it is itself also const), just like the iterator returned by vector::begin, but it cannot be used to 
+//                modify the contents it points to, even if the vector object is not itself const.
+
+  std::vector<int> myvector10 = {10,20,30,40,50};
+
+  std::cout << "myvector10 contains:";
+
+  for (auto t = myvector10.cbegin(); t != myvector10.cend(); ++t)
+    std::cout << ' ' << *t;
+  std::cout << '\n';
+
+
 //vectr::size: Returns the number of elements in the vector.
 cout<<"size of vec6 is : "<<vec6.size();
 cout<<'\n';

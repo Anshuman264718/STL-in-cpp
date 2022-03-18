@@ -31,6 +31,25 @@ int main(){
     cout<<"\n";
     cout<<"\n";
 
+
+//map::rbegin:  Returns a reverse iterator pointing to the last element in the container (i.e., its reverse beginning).
+//              Reverse iterators iterate backwards: increasing them moves them towards the beginning of the container.
+//              rbegin points to the element preceding the one that would be pointed to by member end.
+
+std::map<char,int> mymap10;
+
+  mymap10['x'] = 100;
+  mymap10['y'] = 200;
+  mymap10['z'] = 300;
+
+  // show content:
+std::map<char,int>::reverse_iterator rit;
+cout<<"mymap10 contains: ";
+for (rit=mymap10.rbegin(); rit!=mymap10.rend(); ++rit)
+std::cout << rit->first << " => " << rit->second << '\n';
+
+
+
 //map::empty: check if the map is empty or not, if empty returns 1 else returns 0.
     cout<<"check mymap is empty or not: "<<mymap.empty()<<"\n";
     cout<<"\n";
@@ -116,6 +135,26 @@ int main(){
     cout<<"\n";
 
 
+//map::swap: function is used to swap (or exchange) the contents of two maps but both the maps must be of the same type although sizes may differ.
+
+    map<char, int> m1 = {  
+      {'a', 1},  
+      {'b', 2},  
+      {'c', 3},  
+      {'d', 4},  
+      {'e', 5},  
+      };  
+  
+   map<char, int> m2;  
+  
+   m2.swap(m1);  
+  
+   cout << "Map contains following elements" << endl;  
+  
+   for (auto it = m2.begin(); it != m2.end(); ++it)  
+      cout << it->first << " = " << it->second << endl;  
+
+
 
 //map::find: function is used to find an element with the given key value k. If it finds the element then 
 //           it returns an iterator pointing to the element. Otherwise, it returns an iterator pointing to the end of the map, i.e., map::end().
@@ -146,10 +185,23 @@ int main(){
     std::cout << '\n';
 
 
+//map::emplace_hint: 
+//C++ map emplace_hint() function is used to extend the map container by inserting new elements into the container using hint
+// as a position for element. Elements are built directly (neither copied nor moved).
+//The constructor of the element is called by giving the arguments args passed to this function. 
+//Insertion takes place only if the key is not present already.
 
 
-
-
-
+   map<char, int> m = {  
+            {'b', 20},  
+            {'c', 30},  
+            {'d', 40},  
+            };  
+  
+   m.emplace_hint(m.end(), 'e', 50);  
+   m.emplace_hint(m.begin(), 'a', 10);  
+  cout << "Map contains following elements" << endl;  
+  for (auto it = m.begin(); it != m.end(); ++it)  
+  cout << it->first << " = " << it->second << endl;  
     return 0;
 }
