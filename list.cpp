@@ -94,6 +94,9 @@ list<int> li={1,2,3,4};
 list<int>::iterator it=li.begin();  
 li.insert(it,5);
 it++;           //iterator points to 3rd index, where the value is 2.
+
+//erase:Removes from the list container either a single element (position) or a range of elements ([first,last)).
+
 li.erase(it);
 
 cout<<"li contains: "  ;
@@ -130,6 +133,37 @@ cout<<endl;
 //list::swap: exchange the contents of the list with another list of same type but the sizes can be differ.
 //Parameter
 //x: It is an another list which is to be exchanged with the given list.
+
+int myints[]= {17,89,7,14};
+  std::list<int> mylist10 (myints,myints+4);
+
+  mylist10.remove(89);
+
+  std::cout << "mylist10 contains:";
+  for (std::list<int>::iterator f=mylist10.begin(); f!=mylist10.end(); ++f)
+    std::cout << ' ' << *f;
+  std::cout << '\n';
+
+
+//List sort() function arranges the elements of a given list in an increasing order. 
+//It does not involve in any construction and destruction of elements. Elements are only moved within the container.
+ 
+ 
+   list<int> li10={6,4,10,2,4,1};  
+   list<int>:: iterator l;  
+   cout<<"Elements of list are :";  
+   for(l=li10.begin();l!=li10.end();++l)  
+   std::cout << *l<<",";  
+   li10.sort();  
+   cout<<'\n';  
+   cout<<"Sorted elements are :";  
+   for(l=li10.begin();l!=li10.end();++l)  
+   std::cout << *l <<",";  
+
+
+
+
+
 
 
 
